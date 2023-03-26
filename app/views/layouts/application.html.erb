@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Travelsite</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+  <body data-turbolinks="false">
+
+  <div class="header-list">
+  <ul>
+    <li><%= link_to "ホーム", travels_path %></li>
+    <li><%= link_to "投稿を見る",new_tweet_path %></li>
+    <li><%= link_to "診断を始める", new_travel_path %></li>
+    <li><%= link_to "予定を立てる", blogs_path %></li>
+  </ul>
+  </div>
+
+
+    <%= yield %>
+    <footer>
+    <p>Copyright © GeekSalon All Rights Reserved.</p>
+ 　 </footer>
+  </body>
+</html>
